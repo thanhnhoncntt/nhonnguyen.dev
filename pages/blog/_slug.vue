@@ -10,7 +10,7 @@
 
       <BlogpostItem :post="post" />
       <BlogpostNavigationLinks :prev="prev" :next="next" />
-      <!-- <AppContribute :doc-link="docLink" :contributors="contributors" /> -->
+      <AppContribute :doc-link="docLink" :contributors="contributors" />
     </div>
   </div>
 </template>
@@ -22,7 +22,6 @@ import copyCodeBlock from '~/mixins/copyCodeBlock'
 
 export default {
   name: 'PageSlug',
-  scrollToTop: true,
   components: {
     ArrowLeftIcon
   },
@@ -32,10 +31,19 @@ export default {
       redirect('/')
     }
   },
-  async asyncData({ $content, store, app, params, error, router }) {
+  scrollToTop: true,
+  async asyncData({
+    $content,
+    $contributors,
+    store,
+    app,
+    params,
+    error,
+    router
+  }) {
     const { slug } = params
     let path = `/${app.i18n.defaultLocale}/blog`
-    let post, prev, next, contributors
+    let post, prev, next
 
     try {
       post = await $content(path, slug).fetch()
@@ -52,13 +60,7 @@ export default {
       }
     }
 
-    try {
-      contributors = (
-        await fetch(
-          `https://contributors-api.onrender.com/content${path}/${slug}`
-        ).then(res => res.json())
-      ).map(({ author }) => ({ author }))
-    } catch (e) {}
+    const contributors = await $contributors(`/content${path}/${slug}`)
 
     try {
       ;[prev, next] = await $content(path)

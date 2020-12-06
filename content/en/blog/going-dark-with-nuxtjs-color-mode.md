@@ -188,7 +188,9 @@ Let's create a component called `ColorModePicker` and we can add a list of color
 <template>
   <div>
     <ul>
-      <li v-for="color of colors" :key="color">{{color}}</li>
+      <li v-for="color of colors" :key="color">
+        {{color}}
+      </li>
     </ul>
   </div>
 </template>
