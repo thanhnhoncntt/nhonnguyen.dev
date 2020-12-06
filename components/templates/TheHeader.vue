@@ -12,15 +12,18 @@
         to="/"
         @click.native.right.stop.prevent="$router.push('/design')"
       >
-        <h1 class="m-0 h-0 w-0 overflow-hidden">
-NUXTJS
-</h1>
-        <NuxtLogo
+        <!-- <h1 class="m-0 h-0 w-0 overflow-hidden">Nhơn Nguyễn</h1> -->
+        <h1
           class="h-6 lg:h-8 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
-        />
+        >
+          Nhơn Nguyễn
+        </h1>
+        <!-- <NuxtLogo
+          class="h-6 lg:h-8 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
+        /> -->
       </NuxtLink>
       <!-- Center Navigation -->
-      <nav class="hidden lg:flex lg:pt-1 xl:pt-0 mx-auto">
+      <!-- <nav class="hidden lg:flex lg:pt-1 xl:pt-0 mx-auto">
         <ul class="flex text-center">
           <li
             v-for="link in $t('header.links')"
@@ -55,7 +58,7 @@ NUXTJS
             </a>
           </li>
         </ul>
-      </nav>
+      </nav> -->
       <!-- Algolia Search -->
       <AlgoliaSearch />
     </div>
@@ -63,12 +66,12 @@ NUXTJS
 </template>
 
 <script>
-import NuxtLogo from '~/assets/images/logo.svg?inline'
+// import NuxtLogo from '~/assets/images/logo.svg?inline'
 
 export default {
-  components: {
-    NuxtLogo
-  },
+  // components: {
+  //   NuxtLogo
+  // },
   data() {
     return {
       onTop: true

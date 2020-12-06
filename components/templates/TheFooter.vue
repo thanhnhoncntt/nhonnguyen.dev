@@ -1,11 +1,11 @@
 <template>
   <footer class="z-10 relative pb-16 lg:pb-0 lg:block">
-    <NewsletterForm />
+    <!-- <NewsletterForm /> -->
 
     <div
       class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt transition-colors duration-300 ease-linear"
     >
-      <div class="container mx-auto px-4">
+      <!-- <div class="container mx-auto px-4">
         <div
           class="flex flex-col sm:flex-row text-center sm:text-left items-center content-center justify-between pt-10 sm:py-10"
         >
@@ -47,7 +47,7 @@
             </ul>
           </nav>
         </div>
-      </div>
+      </div> -->
       <div
         class="lg:border-t border-light-border dark:border-dark-border transition-colors duration-300 ease-linear"
       >
@@ -57,20 +57,7 @@
           <div class="flex-1 flex">
             <DarkModeToggle />
           </div>
-          <div class="flex-1 text-center hidden sm:block">
-            <a
-              class="inline-block"
-              href="https://url.netlify.com/B1Mh093Iv"
-              target="_blank"
-            >
-              <img
-                src="https://www.netlify.com/img/global/badges/netlify-color-bg.svg"
-                class="h-10"
-                alt="Deploys by Netlify"
-              />
-            </a>
-          </div>
-          <div class="flex-1 text-right">
+          <!-- <div class="flex-1 text-right">
             <AppLangSelect
               :value="$i18n.locale"
               :options="$i18n.locales"
@@ -80,7 +67,7 @@
                 <GlobeIcon />
               </template>
             </AppLangSelect>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -88,29 +75,15 @@
 </template>
 
 <script>
-import GlobeIcon from '~/assets/icons/globe.svg?inline'
+// import GlobeIcon from '~/assets/icons/globe.svg?inline'
 
 export default {
-  components: {
-    GlobeIcon
-  },
+  // components: {
+  //   GlobeIcon
+  // },
   data() {
     return {
       links: {
-        discover: [
-          {
-            key: this.$t('footer.links.about.team'),
-            to: this.localePath('/team')
-          },
-          {
-            key: this.$t('footer.links.about.design'),
-            to: this.localePath('/design')
-          },
-          {
-            key: this.$t('footer.links.about.contact'),
-            href: 'https://twitter.com/nuxt_js'
-          }
-        ],
         about: [
           {
             key: this.$t('footer.links.support.resources'),
@@ -124,20 +97,6 @@ export default {
             key: this.$t('footer.links.support.contributionGuide'),
             href:
               'https://github.com/nuxt/nuxtjs.org/blob/master/content/en/_archives/guide/contribution-guide.md'
-          }
-        ],
-        support: [
-          {
-            key: this.$t('footer.links.discover.shop'),
-            to: this.localePath('/shop')
-          },
-          {
-            key: this.$t('footer.links.discover.sponsorNuxt'),
-            to: this.localePath('/sponsor-nuxtjs')
-          },
-          {
-            key: this.$t('footer.links.discover.consulting'),
-            to: this.localePath('/support')
           }
         ]
       }

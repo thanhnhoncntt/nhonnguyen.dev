@@ -22,7 +22,7 @@
           </div>
         </div>
       </div>
-      <AppImage :src="post.imgUrl" ratio="16:9" sizes="80vh" class="rounded" />
+      <!-- <AppImage :src="post.imgUrl" ratio="16:9" sizes="80vh" class="rounded" /> -->
     </header>
     <div class="mt-12">
       <NuxtContent :document="post" />

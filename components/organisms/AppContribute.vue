@@ -1,7 +1,7 @@
 <template>
   <div class="pt-4">
     <div class="pt-3 mt-6 border-t border-light-border dark:border-dark-border">
-      <h3
+      <!-- <h3
         v-if="contributors.length"
         class="empty-after after:block after:border-2 after:rounded dark:after:border-dark-onSurfacePrimary light:after:border-light-onSurfacePrimary after:mt-2 after:mb-1 after:w-4/5 my-2 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary relative text-xl table transition-colors duration-300 ease-linear"
       >
@@ -40,8 +40,8 @@
         >
           {{ $t('contribute.edit_on_github') }}
         </a>
-      </p>
-      <p
+      </p> -->
+      <!-- <p
         v-else-if="docLink && $route.path.startsWith('/blog')"
         class="text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pt-1 mb-8 transition-colors duration-300 ease-linear"
       >
@@ -54,7 +54,7 @@
         >
           {{ $t('contribute.edit_on_github') }}
         </a>
-      </p>
+      </p> -->
 
       <CarbonAdsText :key="$route.path" />
     </div>
