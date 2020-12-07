@@ -2,7 +2,7 @@
   <div class>
     <div class="container lg:max-w-4xl mx-auto p-4 pb-8">
       <NuxtLink
-        :to="localePath({ name: 'blog' })"
+        :to="localePath({ name: 'index' })"
         class="inline-flex items-center dark:hover:text-nuxt-lightgreen light:hover:text-nuxt-lightgreen dark:text-dark-onSurfaceSecondary light:text-light-onSurfaceSecondary"
       >
         <ArrowLeftIcon class="h-5 mr-2" />back to blog list

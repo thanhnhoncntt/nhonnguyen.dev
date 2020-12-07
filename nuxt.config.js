@@ -82,7 +82,7 @@ export default {
 
   pwa: {
     manifest: {
-      name: 'NuxtJS'
+      name: 'NhonNguyenDev'
     }
   },
 
@@ -104,11 +104,7 @@ export default {
     '~/plugins/directives',
     '~/plugins/intersection-observer.client.js',
     '~/plugins/vue-observe-visibility.client.js',
-    '~/plugins/ga.client.js',
-    '~/plugins/adblock.client.js',
-    '~/plugins/newsletter.client.js',
-    '~/plugins/vue-scrollactive',
-    '~/plugins/contributors'
+    '~/plugins/vue-scrollactive'
   ],
   env: {
     DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL || false,
@@ -118,7 +114,7 @@ export default {
     NUXT_API: process.env.NUXT_API || 'https://api.nuxtjs.com'
   },
   publicRuntimeConfig: {
-    nuxtLocale: process.env.NUXT_LOCALE || 'en',
+    nuxtLocale: process.env.NUXT_LOCALE || 'vi',
     nuxtVersion: '2.14.7',
     nuxtStars: '32K+'
   },
