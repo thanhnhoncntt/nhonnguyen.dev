@@ -1,21 +1,24 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
+// In this section, we use @vueuse/head. Check this for more detail
+// https://github.com/vueuse/head
+useHead({
+  title: "Elucidator Blog Starter",
+  meta: [
+    {
+      name: "description",
+      content: "Elucidator blog starter for vue and vite",
+    },
+  ],
+})
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Nhơn nguyễn xin chào các bạn" />
+  <div class="min-h-100vh overflow-hidden block relative pb-30 mx-auto flex flex-col">
+    <Navbar />
+    <main class="mx-auto mt-4 min-h-prose w-full lg:max-w-screen-lg">
+      <router-view :key="$route.path" />
+      <ToTopBtn />
+    </main>
+    <Footer />
+  </div>
 </template>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
