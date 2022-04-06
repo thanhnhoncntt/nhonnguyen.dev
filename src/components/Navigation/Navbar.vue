@@ -69,7 +69,7 @@ const dataNavbar: NavbarMenu[] = [
     <div class="max-w-screen-lg mx-auto h-full flex flex-row items-center space-x-4">
       <div class="logo flex-1">
         <router-link to="/" class="font-bold lg:tracking-wide text-2xl ">
-            Elucidator Blog
+            NhonNguyen.Dev
         </router-link>
       </div>
       <div class="flex flex-wrap items-center">
@@ -101,7 +101,7 @@ const dataNavbar: NavbarMenu[] = [
           title="Search articles.."
         />
         <a
-          href="https://github.com/satyawikananda/elucidator-blog-starter"
+          href="https://github.com/thanhnhoncntt"
           target="_blank"
           rel="noreferrer"
           title="repository github"
