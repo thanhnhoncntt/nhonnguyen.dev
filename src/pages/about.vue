@@ -20,12 +20,12 @@
       </div>
       <div class="basis-2/3">
         <div>
-          <h1>Nhơn Nguyễn</h1>
+          <h1 class="font-bold text-5xl mt-10 mb-2.5">Nhơn Nguyễn</h1>
           <h3>Full Stack Laravel Developer</h3>
         </div>
         <ul class="list-nonex">
           <li>
-            <span class="mr-3">Email</span>
+            <span class="mr-3 font-bold opacity-40 uppercase">Email</span>
             <span>
               <a href="mailto:thanhnhon.cntt@gmail.com"
                 >thanhnhon.cntt@gmail.com</a
@@ -33,7 +33,7 @@
             </span>
           </li>
           <li>
-            <span class="mr-3">Skype</span>
+            <span class="mr-3 font-bold opacity-40 uppercase">Skype</span>
             <span>
               <a href="skype:thanhnhon_cntt@hotmail.com"
                 >thanhnhon_cntt@hotmail.com</a
@@ -185,3 +185,22 @@
     </div>
   </div>
 </template>
+
+<style>
+h2 {
+  @apply font-medium text-4xl mt-0 mb-10;
+  font-family: 'Roboto Mono', monospace;
+  line-height: 42px;
+}
+.resume-list__block-title {
+  @apply font-bold leading-5 m-0 pb-1 uppercase;
+  color: rgba(109, 86, 193, 1);
+  font-size: 14px;
+  font-family: 'Roboto Mono', monospace;
+}
+.resume-list__block-date {
+  @apply leading-5 m-0 pb-2.5;
+  font-size: 14px;
+  color: rgba(153, 153, 153, 1);
+}
+</style>
